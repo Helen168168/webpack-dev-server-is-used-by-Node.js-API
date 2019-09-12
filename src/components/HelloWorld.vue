@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
   <span>this is my first project using webpack-dev-server and hot reload plugin</span>
-    
   </div>
 </template>
 

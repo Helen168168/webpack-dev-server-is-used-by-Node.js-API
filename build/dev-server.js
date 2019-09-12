@@ -2,16 +2,15 @@ const webpack = require('webpack');
 const config = require('../config')
 const webpackDevServer = require('webpack-dev-server');
 const webpackConfig = require('./webpack.dev.conf');
-webpackConfig.entry.unshift("webpack-dev-server/client?http://localhost:8081/", 'webpack/hot/dev-server');
+
 const options = {
   contentBase: config.dev.assetsPublicPath,
   hot: true,
-  inline: true,
+  inline: false,
   disableHostCheck: true,
-  stats: { 
-    colors: true 
-  }
+  watchContentBase: true
 }
+webpackConfig.entry.unshift("webpack-dev-server/client?http://localhost:8081/",'webpack/hot/dev-server');
 webpackDevServer.addDevServerEntrypoints(webpackConfig, options);
 const compiler = webpack(webpackConfig);
 const server = new webpackDevServer(compiler, options);
