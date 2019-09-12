@@ -1,34 +1,36 @@
 <template>
-  <div class="hello">
-  <span>this is my first project using webpack-dev-server and hot reload plugin</span>
+  <div class="hello" v-initDirective="3">
+    <span>this is my first project using webpack-dev-server and hot reload plugin!</span>
+    <p>{{ testData }}</p>
   </div>
 </template>
 
 <script>
+import { $getData } from '@/api/getData'
+import testMinix from '@/mixins/index'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  }
+  },
+  mounted() {
+    this.getData()
+  },
+  mixins: [testMinix],
+  methods: {
+    getData() {
+      $getData({orgCode:'00003', period:'201902' }).then(res => {
+        
+      })
+    }
+  },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  .red {
+    color: red;
+  }
 </style>
