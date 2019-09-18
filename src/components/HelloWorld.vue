@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { $getData } from '@/api/getData'
+
 import testMinix from '@/mixins/index'
 export default {
   name: 'HelloWorld',
@@ -21,9 +21,7 @@ export default {
   mixins: [testMinix],
   methods: {
     getData() {
-      $getData({orgCode:'00003', period:'201902' }).then(res => {
-        
-      })
+    
     }
   },
 }

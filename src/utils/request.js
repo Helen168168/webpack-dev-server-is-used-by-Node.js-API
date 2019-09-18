@@ -10,6 +10,7 @@ axios.defaults.headers = {
     'Assess-Control-Allow-Credentrtials': true
 }
 
+//允许请求时携带cookie给服务器
 axios.defaults.withCredential = true;
 
 export const post = (url, data = {}) => {
@@ -47,7 +48,7 @@ axios.interceptors.request.use(function(config) {
 })
 
   //响应拦截器
-  axios.interceptors.response.use(
+axios.interceptors.response.use(
     response => {
         const res = response.data
         if(res.meta && !res.meta.success) {
