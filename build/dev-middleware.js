@@ -8,7 +8,7 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const app = express();
 const config = require('./webpack.dev.conf.js');
-const WebpackHotMiddleware = require('webpack-hot-middleware')
+const WebpackHotMiddleware = require('webpack-hot-middleware');
 const compiler = webpack(config);
 
 config.entry.unshift('webpack-hot-middleware/client');
