@@ -5,10 +5,13 @@ import App from './App'
 import router from './router'
 import elementui from 'element-ui'
 import directive from '@/directive/index'
+
 Vue.config.productionTip = false
 
 Vue.use(elementui)
 Vue.use(directive)
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

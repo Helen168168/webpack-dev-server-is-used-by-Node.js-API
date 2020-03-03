@@ -1,5 +1,6 @@
 <template>
  <div class="box">
+     <basic-sidebar></basic-sidebar>
         <ul class="puzzle-wrap">
             <li 
                 :class="{'puzzle': true, 'puzzle-empty': !puzzle}" 
@@ -20,6 +21,7 @@
  * 思路： 数组[1,2,3,4,5,6,7,8,9,10,11,12,131,4,15]随机排序,交换位置实现正序并闯关成功
  */
 import testMinix from '@/mixins/index'
+import basicSidebar from 'basic-sidebar/src/components/sidebar'
 export default {
   name: 'puzzleGame',
   data () {
@@ -27,6 +29,7 @@ export default {
       puzzles: Array.from({ length: 15 }, (value, index) => index + 1) //组建数组里面值时1-15的数字
     }
   },
+  components: { basicSidebar },
   mounted() {
     this.getData()
   },
