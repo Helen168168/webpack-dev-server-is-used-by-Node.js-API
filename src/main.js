@@ -5,12 +5,12 @@ import App from './App'
 import router from './router'
 import elementui from 'element-ui'
 import directive from '@/directive/index'
-
+import basicSidebar from 'basic-sidebar'
 Vue.config.productionTip = false
 
 Vue.use(elementui)
 Vue.use(directive)
-
+Vue.use(basicSidebar)
 
 /* eslint-disable no-new */
 new Vue({
