@@ -1,6 +1,6 @@
 <template>
  <div class="box">
-        <sidebar></sidebar>
+        
         <ul class="puzzle-wrap">
             <li 
                 :class="{'puzzle': true, 'puzzle-empty': !puzzle}" 

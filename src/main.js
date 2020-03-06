@@ -4,8 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import elementui from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import directive from '@/directive/index'
 import basicSidebar from 'basic-sidebar'
+
 Vue.config.productionTip = false
 
 Vue.use(elementui)
